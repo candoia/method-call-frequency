@@ -1,0 +1,11 @@
+# get project stats
+p: Project = input;
+
+Methods : output sum[string] of int;
+threshold:int = 20;
+visit(p, visitor {
+    before node : Expression -> {
+	     if(node.kind == ExpressionKind. METHODCALL)
+               Methods[node.method] << 1;
+    }   
+});
